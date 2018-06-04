@@ -4,12 +4,12 @@ import logo from '../logo2.svg';
 
 const redirect = path => {
   if(path === '/') {
-    return 'SlideIn'
+    return 'SlideInFromRight'
   }
   if(path === '/hello') {
-    return 'SlideOut'
+    return 'SlideInFromLeft'
   }
-  if(path === '/slideup') {
+  if(path === '/helloagain') {
     return 'SlideUp'
   }
   return 'SlideDown'
