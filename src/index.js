@@ -6,7 +6,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <Router>
+  <Router basename="/animated-routes">
     <App />
   </Router>, 
   document.getElementById('root')
