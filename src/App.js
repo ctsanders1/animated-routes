@@ -1,4 +1,4 @@
-import { Route, Switch, NavLink, IndexLink } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 import React, { Component } from 'react';
 
 import Home from './pages/Home'
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="nav">
-          <NavLink exact to="/" onlyActiveOnIndex activeClassName="active">Home</NavLink>{' '}
+          <NavLink exact to="/" activeClassName="active">Home</NavLink>{' '}
           <NavLink to="/hello" activeClassName="active">Hello</NavLink>{' '}  
           <NavLink to="/helloagain" activeClassName="active">HelloAgain</NavLink>{' '}  
           <NavLink to="/goodbye" activeClassName="active">Goodbye</NavLink>  

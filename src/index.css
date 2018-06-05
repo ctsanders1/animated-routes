@@ -54,9 +54,8 @@ a.active {
 }
 
 img {
-  display: block;
-  width: 120px;
-  height: auto;
+  display: inline-block;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;

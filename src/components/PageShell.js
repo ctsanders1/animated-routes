@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import logo from '../logo2.svg';
+import logo from '../logo.svg';
+import rrLogo from '../react-router-logo.png'
 
 const redirect = path => {
   if(path === '/') {
@@ -25,7 +26,9 @@ const PageShell = Page => {
         transitionLeaveTimeout={150}
         transitionName={redirect(props.match.path)}
       >
-        <img src={logo} alt="" />
+        <img src={logo} alt="react logo" title="react logo" />
+        <img src={rrLogo} alt="react router logo" title="react router logo" />
+
         <Page {...props} />
       </ReactCSSTransitionGroup>
     </div>;
