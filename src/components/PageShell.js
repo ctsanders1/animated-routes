@@ -1,29 +1,32 @@
-import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import logo from '../logo.svg';
+import React from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import logo from '../logo.svg'
 import rrLogo from '../react-router-logo.png'
 
 const redirect = path => {
-  if(path === '/') {
+  if (path === '/') {
     return 'SlideInFromRight'
   }
-  if(path === '/hello') {
+  if (path === '/hello') {
     return 'SlideInFromLeft'
   }
-  if(path === '/helloagain') {
+  if (path === '/helloagain') {
     return 'SlideUp'
+  }
+  if (path === '/fadein') {
+    return 'FadeIn'
   }
   return 'SlideDown'
 }
 
 const PageShell = Page => {
-  return props =>
+  return props => (
     <div className="page">
       <ReactCSSTransitionGroup
         transitionAppear={true}
-        transitionAppearTimeout={200}
-        transitionEnterTimeout={200}
-        transitionLeaveTimeout={150}
+        transitionAppearTimeout={800}
+        transitionEnterTimeout={800}
+        transitionLeaveTimeout={800}
         transitionName={redirect(props.match.path)}
       >
         <img src={logo} alt="react logo" title="react logo" />
@@ -31,7 +34,8 @@ const PageShell = Page => {
 
         <Page {...props} />
       </ReactCSSTransitionGroup>
-    </div>;
-};
+    </div>
+  )
+}
 
-export default PageShell;
+export default PageShell

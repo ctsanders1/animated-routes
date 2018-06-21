@@ -340,3 +340,26 @@ p {
     transition: all 0.15s linear;
 }
 
+
+
+.FadeIn-appear {
+  opacity: 0;
+}
+.FadeIn-appear.FadeIn-appear-active {
+  opacity: 1;
+  transition: all .8s linear;
+}
+.FadeIn-enter {
+    opacity: 0;
+}
+.FadeIn-enter.FadeIn-enter-active {
+    opacity: 1;
+    transition: all .8s linear;
+}
+.FadeIn-leave {
+    opacity: 1.0;
+}
+.FadeIn-leave.FadeIn-leave-active {
+    opacity: 0;
+    transition: all .8s linear;
+}
