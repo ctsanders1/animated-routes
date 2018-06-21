@@ -1,30 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   height: 100%;
 }
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: 'Lato', sans-serif;
-  background: #EEEEEE;
+  background: #eeeeee;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .App {
-  width: 80%;
+  max-width: 80em;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media(min-width: 40em) {
- .App {
-    width: 40%;
-  } 
-}
-
 .nav {
   padding: 10px 0;
-  margin-top: 10px;
   text-align: center;
   background: #fff;
   box-shadow: 0 5px 15px 0px #c8c8c8;
@@ -41,16 +37,18 @@ a.active {
 }
 
 .page {
+  display: flex;
   box-sizing: border-box;
-  background: #FFFFFF;
-  padding: 120px 30px 20px;
+  background: #ffffff;
   box-shadow: 0 5px 15px 0px #c8c8c8;
   position: relative;
-  top: 40%;
-  transform: translateY(-50%); 
-  height: 420px;
+  top: 50px;
+  height: 75vh;
   overflow: hidden;
-  text-align: center;
+}
+
+.page-content-container {
+  margin: auto;
 }
 
 img {
@@ -72,17 +70,17 @@ p {
   padding: 0 400px;
   color: #848484;
   font-weight: lighter;
- }
+}
 
- .form {
-   display: flex;
-   justify-content: center;
-   margin-top: 400px;
- }
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 400px;
+}
 
 .form input {
-  background: #FAFAFA;
-  border: 1px solid #C7C7C7;
+  background: #fafafa;
+  border: 1px solid #c7c7c7;
   border-radius: 2px;
   height: 400px;
   width: 180px;
@@ -94,8 +92,8 @@ p {
 }
 
 .form button {
-  background: #F76C6C;
-  box-shadow: 0 16px 18px 0 rgba(0,0,0,0.13), 0 4px 6px 0 rgba(0,0,0,0.16);
+  background: #f76c6c;
+  box-shadow: 0 16px 18px 0 rgba(0, 0, 0, 0.13), 0 4px 6px 0 rgba(0, 0, 0, 0.16);
   border-radius: 2px;
   border: none;
   color: #fff;
@@ -129,47 +127,41 @@ p {
   transition: all 0.2s linear;
 }
 .SlideInFromRight-enter {
-    opacity: 0;
-    transform: translateX(400px);
+  opacity: 0;
+  transform: translateX(400px);
   -webkit-transform: translateX(400px);
   -moz-transform: translateX(400px);
   -o-transform: translateX(400px);
   -ms-transform: translateX(400px);
 }
 .SlideInFromRight-enter.SlideInFromRight-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transition: all 0.15s linear 0.4s;
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transition: all 0.15s linear 0.4s;
 }
 .SlideInFromRight-leave {
-    opacity: 1.0;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    -ms-transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
 }
 .SlideInFromRight-leave.SlideInFromRight-leave-active {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    transform: translateX(-400px);
-    -webkit-transform: translateX(-400px);
-    -moz-transform: translateX(-400px);
-    -o-transform: translateX(-400px);
-    -ms-transform: translateX(-400px);
-    transition: all 0.15s linear;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateX(-400px);
+  -webkit-transform: translateX(-400px);
+  -moz-transform: translateX(-400px);
+  -o-transform: translateX(-400px);
+  -ms-transform: translateX(-400px);
+  transition: all 0.15s linear;
 }
-
-
-
-
-
-
 
 .SlideInFromLeft-appear {
   transform: translateX(-400px);
@@ -190,43 +182,41 @@ p {
   transition: all 0.2s linear;
 }
 .SlideInFromLeft-enter {
-    opacity: 0;
-    transform: translateX(-400px);
+  opacity: 0;
+  transform: translateX(-400px);
   -webkit-transform: translateX(-400px);
   -moz-transform: translateX(-400px);
   -o-transform: translateX(-400px);
   -ms-transform: translateX(-400px);
 }
 .SlideInFromLeft-enter.SlideInFromLeft-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transition: all 0.15s linear 0.4s;
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transition: all 0.15s linear 0.4s;
 }
 .SlideInFromLeft-leave {
-    opacity: 1.0;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    -ms-transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
 }
 .SlideInFromLeft-leave.SlideInFromLeft-leave-active {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    transform: translateX(400px);
-    -webkit-transform: translateX(400px);
-    -moz-transform: translateX(400px);
-    -o-transform: translateX(400px);
-    -ms-transform: translateX(400px);
-    transition: all 0.15s linear;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateX(400px);
+  -webkit-transform: translateX(400px);
+  -moz-transform: translateX(400px);
+  -o-transform: translateX(400px);
+  -ms-transform: translateX(400px);
+  transition: all 0.15s linear;
 }
-
-
 
 .SlideDown-appear {
   transform: translateY(-400px);
@@ -247,43 +237,41 @@ p {
   transition: all 0.2s linear;
 }
 .SlideDown-enter {
-    opacity: 0;
-    transform: translateY(-400px);
+  opacity: 0;
+  transform: translateY(-400px);
   -webkit-transform: translateY(-400px);
   -moz-transform: translateY(-400px);
   -o-transform: translateY(-400px);
   -ms-transform: translateY(-400px);
 }
 .SlideDown-enter.SlideDown-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transition: all 0.15s linear 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transition: all 0.15s linear 0.4s;
 }
 .SlideDown-leave {
-    opacity: 1.0;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
 }
 .SlideDown-leave.SlideDown-leave-active {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    transform: translateY(400px);
-    -webkit-transform: translateY(400px);
-    -moz-transform: translateY(400px);
-    -o-transform: translateY(400px);
-    -ms-transform: translateY(400px);
-    transition: all 0.15s linear;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateY(400px);
+  -webkit-transform: translateY(400px);
+  -moz-transform: translateY(400px);
+  -o-transform: translateY(400px);
+  -ms-transform: translateY(400px);
+  transition: all 0.15s linear;
 }
-
-
 
 .SlideUp-appear {
   transform: translateY(400px);
@@ -304,62 +292,60 @@ p {
   transition: all 0.2s linear;
 }
 .SlideUp-enter {
-    opacity: 0;
-    transform: translateY(400px);
+  opacity: 0;
+  transform: translateY(400px);
   -webkit-transform: translateY(400px);
   -moz-transform: translateY(400px);
   -o-transform: translateY(400px);
   -ms-transform: translateY(400px);
 }
 .SlideUp-enter.SlideUp-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transition: all 0.15s linear 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transition: all 0.15s linear 0.4s;
 }
 .SlideUp-leave {
-    opacity: 1.0;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    -ms-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
 }
 .SlideUp-leave.SlideUp-leave-active {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    transform: translateY(-400px);
-    -webkit-transform: translateY(-400px);
-    -moz-transform: translateY(-400px);
-    -o-transform: translateY(-400px);
-    -ms-transform: translateY(-400px);
-    transition: all 0.15s linear;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transform: translateY(-400px);
+  -webkit-transform: translateY(-400px);
+  -moz-transform: translateY(-400px);
+  -o-transform: translateY(-400px);
+  -ms-transform: translateY(-400px);
+  transition: all 0.15s linear;
 }
-
-
 
 .FadeIn-appear {
   opacity: 0;
 }
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
-  transition: all .8s linear;
+  transition: all 0.8s linear;
 }
 .FadeIn-enter {
-    opacity: 0;
+  opacity: 0;
 }
 .FadeIn-enter.FadeIn-enter-active {
-    opacity: 1;
-    transition: all .8s linear;
+  opacity: 1;
+  transition: all 0.8s linear;
 }
 .FadeIn-leave {
-    opacity: 1.0;
+  opacity: 1;
 }
 .FadeIn-leave.FadeIn-leave-active {
-    opacity: 0;
-    transition: all .8s linear;
+  opacity: 0;
+  transition: all 0.8s linear;
 }

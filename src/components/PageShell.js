@@ -28,6 +28,8 @@ const PageShell = Page => {
         transitionEnterTimeout={800}
         transitionLeaveTimeout={800}
         transitionName={redirect(props.match.path)}
+        component="div"
+        className="page-content-container"
       >
         <img src={logo} alt="react logo" title="react logo" />
         <img src={rrLogo} alt="react router logo" title="react router logo" />
